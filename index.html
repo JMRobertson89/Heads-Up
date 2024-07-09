@@ -6,87 +6,104 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Heads Up</title>
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 
 <body>
-        <head>
-            <h1>Heads Up</h1>
-            <div class="nav">
-                <ul>
-                    <li href="#home">Home</li>
-                    <li href="#about">About</li>
-                    <li href="#contact">Contact</li>
-                </ul>
+
+    <header>
+        <box-icon name='briefcase-alt' size="lg" animation="tada"></box-icon>
+        <h1>Heads Up</h1>
+    </header>
+
+
+    <main class="container">
+
+        <section id='destModal'>
+            <div>
+                <button type="button" class="btn btn-primary" id="destBtn" data-bs-toggle="modal"
+                    data-bs-target="#exampleModal">Where are you headed?</button>
             </div>
-        </head>
-
-
-        <main class="container">
-            <section id='destModal'>
-                <div>
-                    <button>Where are you headed?</button>
-                </div>
-                
-                <div class="modal-overlay" id="destModal">
-                    <div class="modal">
-                        <span class="close">&times;</span>
-                        <div class=modalForm>
-                            <h4>Enter City & State</h4>
-                            <form id="destForm">
-                                <input type="text" id="destCity" name="destCity" placeholder="City">
-                                <input type="text" id="destState" name="destState" placeholder="State">
-                                <button type="submit">Enter</button>
-                            </form>
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h1 class="modal-title fs-5" id="exampleModalLabel">Enter City and State</h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <input type="text" id="destCity" name="destCity" placeholder="City" required>
+                            <input type="text" id="destState" name="destState" placeholder="State" required>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-primary">Submit</button>
                         </div>
                     </div>
                 </div>
-            </section>
+            </div>
+        </section>
 
-            <section id="apis">
-                <div class="box" id="map">
-                    <div class="box-header">
-                        <h2 class="box-title">Map</h2>
+        <section id="apis">
+            <div class="row g-0 text-center">
+                <div class="col-sm-6 col-md-4" id="map">Map</div>
+                <div class="col-6 col-md-4" id="weather">Weather</div>
+                <div class="col-6 col-md-8" id="news">News</div>
+            </div>
+        </section>
+
+        <section>
+            <div class="container text-center">
+                <div class="row">
+                    <div class="containerAbt">
+                        <h2>About Us</h2>
+                        <p>Welcome to Heads Up, your ultimate destination for dynamic and engaging location-based
+                            information. We specialize in transforming your location data into a comprehensive and
+                            interactive experience. Whether you're planning a trip, exploring your local area, or just
+                            curious about a place, Heads Up is here to provide you with real-time updates and valuable
+                            insights.</p>
+
+                        <h4>What We Offer</h4>
+                        <ul>
+                            <li><strong>Interactive Maps</strong>: Our cutting-edge technology allows you to input any
+                                location and receive an interactive map that highlights key points of interest,
+                                landmarks, and hidden gems. Navigate your surroundings with ease and discover new places
+                                effortlessly.</li>
+                            <li><strong>Hot News</strong>: Stay informed with the latest news tailored to your selected
+                                location. From breaking news and local events to cultural stories and business updates,
+                                we ensure you're always in the loop with what's happening around you.</li>
+                            <li><strong>Local Weather</strong>: Never get caught off guard by the weather again. Our
+                                accurate and up-to-date weather forecasts provide you with all the information you need,
+                                including temperature, precipitation, and severe weather alerts, so you can plan your
+                                day with confidence.</li>
+                        </ul>
+
+                        <p>Explore the world like never before with GeoInsight. Your adventure starts here.</p>
                     </div>
-                    <div class="box-body">
-                        <div id="map-body"></div>
+                    <div class="col">
+                        <h2>Contact</h2>
+                        <form class="form-container" id="contactForm">
+                            <input id="name" type="name" placeholder="Name" />
+                            <input id="emailAddress" type="email" placeholder="Email" />
+                            <textarea name="" id="comment" placeholder="How can we help?"></textarea>
+                            <button id="submit" type="submit">Submit</button>
+                        </form>
                     </div>
                 </div>
+            </div>
+        </section>
 
-                <div class="box" id="weather">
-                    <div class="box-header">
-                        <h2 class="box-title">Weather</h2>
-                    </div>
-                    <div class="box-body">
-                        <div id="weather-body"></div>
-                    </div>
-                </div>
 
-                <div class="box" id="news">
-                    <div class="box-header">
-                        <h2 class="box-title">News</h2>
-                    </div>
-                    <div class="box-body">
-                        <div id="news-body"></div>
-                    </div>
-                </div>
-            </section>
-
-            <section id="about">
-                <h2>About</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Elementum tempus egestas sed sed risus. Ac turpis egestas integer eget aliquet nibh. Ipsum faucibus vitae aliquet nec ullamcorper sit amet risus nullam. Mauris sit amet massa vitae. Velit euismod in pellentesque massa. Elit scelerisque mauris pellentesque pulvinar pellentesque. Id semper risus in hendrerit. Facilisis gravida neque convallis a cras semper auctor neque vitae. Eu lobortis elementum nibh tellus molestie nunc. Sapien pellentesque habitant morbi tristique senectus et. Nibh cras pulvinar mattis nunc sed blandit libero volutpat sed. Elit eget gravida cum sociis.</p>
-            </section>
-
-            <section>
-                <h2>Contact</h2>
-                <form class="contactForm" id="contactForm">
-                    <input id="name" type="name" placeholder="Name" />
-                    <input id="emailAddress" type="email" placeholder="Email" />
-                    <button type="submit">Submit</button>
-                </form>
-            </section>
-
-        </main>
+    </main>
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+        integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+        crossorigin="anonymous"></script>
     <script src="assets/javascript/script.js"></script>
 </body>
 
