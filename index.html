@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Heads Up</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+        <head>
+            <h1>Heads Up</h1>
+            <div class="nav">
+                <ul>
+                    <li href="#home">Home</li>
+                    <li href="#about">About</li>
+                    <li href="#contact">Contact</li>
+                </ul>
+            </div>
+        </head>
+
+
+        <main class="container">
+            <section id='destModal'>
+                <div>
+                    <button>Where are you headed?</button>
+                </div>
+                
+                <div class="modal-overlay" id="destModal">
+                    <div class="modal">
+                        <span class="close">&times;</span>
+                        <div class=modalForm>
+                            <h4>Enter City & State</h4>
+                            <form id="destForm">
+                                <input type="text" id="destCity" name="destCity" placeholder="City">
+                                <input type="text" id="destState" name="destState" placeholder="State">
+                                <button type="submit">Enter</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="apis">
+                <div class="box" id="map">
+                    <div class="box-header">
+                        <h2 class="box-title">Map</h2>
+                    </div>
+                    <div class="box-body">
+                        <div id="map-body"></div>
+                    </div>
+                </div>
+
+                <div class="box" id="weather">
+                    <div class="box-header">
+                        <h2 class="box-title">Weather</h2>
+                    </div>
+                    <div class="box-body">
+                        <div id="weather-body"></div>
+                    </div>
+                </div>
+
+                <div class="box" id="news">
+                    <div class="box-header">
+                        <h2 class="box-title">News</h2>
+                    </div>
+                    <div class="box-body">
+                        <div id="news-body"></div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="about">
+                <h2>About</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Elementum tempus egestas sed sed risus. Ac turpis egestas integer eget aliquet nibh. Ipsum faucibus vitae aliquet nec ullamcorper sit amet risus nullam. Mauris sit amet massa vitae. Velit euismod in pellentesque massa. Elit scelerisque mauris pellentesque pulvinar pellentesque. Id semper risus in hendrerit. Facilisis gravida neque convallis a cras semper auctor neque vitae. Eu lobortis elementum nibh tellus molestie nunc. Sapien pellentesque habitant morbi tristique senectus et. Nibh cras pulvinar mattis nunc sed blandit libero volutpat sed. Elit eget gravida cum sociis.</p>
+            </section>
+
+            <section>
+                <h2>Contact</h2>
+                <form class="contactForm" id="contactForm">
+                    <input id="name" type="name" placeholder="Name" />
+                    <input id="emailAddress" type="email" placeholder="Email" />
+                    <button type="submit">Submit</button>
+                </form>
+            </section>
+
+        </main>
+    <script src="assets/javascript/script.js"></script>
+</body>
+
+</html>
