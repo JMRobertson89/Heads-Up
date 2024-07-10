@@ -1,4 +1,5 @@
 
+
 // Map API
 
 var map = L.map('map').setView([51.505, -0.09], 13);
@@ -11,8 +12,12 @@ L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
 var marker = L.marker([51.5, -0.09]).addTo(map);
 
 
-// Weather API
-let weather = {
-    "apiKey": "a62915ca2ffd9620d9f39d90f68fc54d"
-}
+
+
+const options = {method: 'GET', headers: {accept: 'application/json'}};
+
+fetch('https://api.tomorrow.io/v4/weather/realtime?location=hartford&units=imperial&apikey=ns6H9BEVqWNemqAjv63ImeJ1sepRXXoE', options)
+  .then(response => response.json())
+  .then(response => console.log(response))
+  .catch(err => console.error(err));
 
