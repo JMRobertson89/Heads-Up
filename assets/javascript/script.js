@@ -62,12 +62,8 @@ function fetchLocation(city, state) {
                 alert('Location not found');
             }
         })
-        .catch(error => {
-            console.error('Error fetching location:', error);
-            alert('Error fetching location');
-        });
 }
-=======
+
 
 
 // Map API
