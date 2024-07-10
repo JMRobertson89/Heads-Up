@@ -96,6 +96,18 @@ textarea {
 
 
 
+.containerAbt {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+#map {
+  height: 500px;
+  width: 500px;
+}
+=======
+
 
 /* TODO style bottom grid */
 
@@ -128,3 +140,4 @@ h2 {
     grid-auto-flow: column;
   }
 }
+
