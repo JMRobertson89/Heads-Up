@@ -9,6 +9,12 @@
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+        crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+        integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+        crossorigin=""></script>
     <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 
@@ -47,51 +53,84 @@
             </div>
         </section>
 
-        <section id="apis">
-            <div class="row g-0 text-center">
-                <div class="col-sm-6 col-md-4" id="map">Map</div>
-                <div class="col-6 col-md-4" id="weather">Weather</div>
-                <div class="col-6 col-md-8" id="news">News</div>
+
+
+
+
+        <section class="apis">
+
+            <div id="map"></div>
+        
+
+
+
+            <div id="weather">
+                <div class="h2">Weather in Hartford</div>
+                <h2 class="temp">51°C</h2>
+                <img src="" alt="" class="icon">
+                <div class="description">Cloudy</div>
+                <div class="humidity">Humidity: 60%</div>
+                <div class="wind">Wind Speed: 6.2 km/h</div>
+
+                </div>
             </div>
+
+
+
+            <div id="news">
+                <h3>news</h3>
+            </div>
+
+
+
         </section>
 
+
+
+
+
+
+
+
+
+
         <section>
-            <div class="container text-center">
-                <div class="row">
-                    <div class="containerAbt">
-                        <h2>About Us</h2>
-                        <p>Welcome to Heads Up, your ultimate destination for dynamic and engaging location-based
-                            information. We specialize in transforming your location data into a comprehensive and
-                            interactive experience. Whether you're planning a trip, exploring your local area, or just
-                            curious about a place, Heads Up is here to provide you with real-time updates and valuable
-                            insights.</p>
+            <div class="container2">
+                <div>
+                    <h2>About Us</h2>
+                    <p>Welcome to Heads Up, your ultimate destination for dynamic and engaging location-based
+                        information. We specialize in transforming your location data into a comprehensive and
+                        interactive experience. Whether you're planning a trip, exploring your local area, or just
+                        curious about a place, Heads Up is here to provide you with real-time updates and valuable
+                        insights.</p>
 
-                        <h4>What We Offer</h4>
-                        <ul>
-                            <li><strong>Interactive Maps</strong>: Our cutting-edge technology allows you to input any
-                                location and receive an interactive map that highlights key points of interest,
-                                landmarks, and hidden gems. Navigate your surroundings with ease and discover new places
-                                effortlessly.</li>
-                            <li><strong>Hot News</strong>: Stay informed with the latest news tailored to your selected
-                                location. From breaking news and local events to cultural stories and business updates,
-                                we ensure you're always in the loop with what's happening around you.</li>
-                            <li><strong>Local Weather</strong>: Never get caught off guard by the weather again. Our
-                                accurate and up-to-date weather forecasts provide you with all the information you need,
-                                including temperature, precipitation, and severe weather alerts, so you can plan your
-                                day with confidence.</li>
-                        </ul>
+                    <h4>What We Offer</h4>
+                    <ul>
+                        <li><strong>Interactive Maps</strong>: Our cutting-edge technology allows you to input any
+                            location and receive an interactive map that highlights key points of interest,
+                            landmarks, and hidden gems. Navigate your surroundings with ease and discover new places
+                            effortlessly.</li>
+                        <li><strong>Hot News</strong>: Stay informed with the latest news tailored to your selected
+                            location. From breaking news and local events to cultural stories and business updates,
+                            we ensure you're always in the loop with what's happening around you.</li>
+                        <li><strong>Local Weather</strong>: Never get caught off guard by the weather again. Our
+                            accurate and up-to-date weather forecasts provide you with all the information you need,
+                            including temperature, precipitation, and severe weather alerts, so you can plan your
+                            day with confidence.</li>
+                    </ul>
 
-                        <p>Explore the world like never before with GeoInsight. Your adventure starts here.</p>
-                    </div>
-                    <div class="col">
-                        <h2>Contact</h2>
-                        <form class="form-container" id="contactForm">
-                            <input id="name" type="name" placeholder="Name" />
-                            <input id="emailAddress" type="email" placeholder="Email" />
-                            <textarea name="" id="comment" placeholder="How can we help?"></textarea>
-                            <button id="submit" type="submit">Submit</button>
-                        </form>
-                    </div>
+                    <p>Explore the world like never before with Heads Up. Your adventure starts here.</p>
+                </div>
+
+
+                <div>
+                    <h2>Contact</h2>
+                    <form class="form-container" id="contactForm">
+                        <input id="name" type="name" placeholder="Name" />
+                        <input id="emailAddress" type="email" placeholder="Email" />
+                        <textarea name="" id="comment" placeholder="How can we help?"></textarea>
+                        <button id="submit" type="submit">Submit</button>
+                    </form>
                 </div>
             </div>
         </section>
