@@ -8,6 +8,7 @@
 }
 
 
+
 /* TODO style Header */
 
 header {
@@ -17,6 +18,50 @@ header {
 h1 {
   margin-left: 5px;
 }
+
+
+
+
+
+/* TODO style api grid */
+
+.apis {
+  margin: 5rem auto;
+  width: min(90%, 75rem);
+}
+
+#map {
+  height: 500px;
+  
+
+}
+
+
+
+#weather {
+  background: #d29f9fd0;
+  width: 100%;
+  text-align: left;
+  font-size: 120%;
+}
+
+h2.temp {
+  text-align: left;
+}
+
+
+
+
+#news {
+  background: #007bff;
+}
+
+
+/* TODO style About Us */
+
+
+
+
 
 
 /* TODO style contact form */
@@ -49,10 +94,37 @@ textarea {
 }
 
 
-/* TODO style About Us */
 
-.containerAbt {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
+
+
+/* TODO style bottom grid */
+
+.container2 {
+  margin: 5rem auto;
+  width: min(90%, 75rem);
+  display: grid;
+  grid-auto-flow: row;
+  text-align: left;
+  gap: 1rem;
+}
+
+
+h2 {
+  text-align: center;
+  padding: 10px;
+  gap: 1rem;
+}
+
+
+
+
+/* TODO media resizing */
+
+@media (min-width: 45rem) {
+  .apis {
+    grid-auto-flow: column;
+  }
+  .container2 {
+    grid-auto-flow: column;
+  }
 }
