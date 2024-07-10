@@ -56,3 +56,8 @@ textarea {
     margin: 0 auto;
     padding: 20px;
 }
+
+#map {
+  height: 500px;
+  width: 500px;
+}
