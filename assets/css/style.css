@@ -40,6 +40,25 @@ h1 {
 
 h2.temp {
   text-align: left;
+  margin-left: 10px;
+}
+
+.city {
+  font-size: 150%;
+  margin-left: 10px;
+}
+
+.description {
+  text-transform: capitalize;
+  margin-left: 10px;
+}
+
+.humidity {
+  margin-left: 10px;
+}
+
+.wind {
+  margin-left: 10px;
 }
 
 
