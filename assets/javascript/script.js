@@ -60,7 +60,7 @@ function fetchLocation(city, state) {
                 marker.setLatLng([lat, lon]);
 
                 // Fetch weather information for lat lon
-                weather.fetchweather(lat, lon)
+                weather.fetchWeather(lat, lon)
             } else {
                 alert('Location not found');
             }
