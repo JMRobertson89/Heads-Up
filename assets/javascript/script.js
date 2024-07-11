@@ -58,6 +58,9 @@ function fetchLocation(city, state) {
 
                 // Move the marker
                 marker.setLatLng([lat, lon]);
+
+                // Fetch weather information for lat lon
+                weather.fetchWeather(lat, lon)
             } else {
                 alert('Location not found');
             }
@@ -78,10 +81,12 @@ function fetchLocation(city, state) {
 
 let weather = {
     apiKey: "a62915ca2ffd9620d9f39d90f68fc54d",
-    fetchWeather: function (city) {
+    fetchWeather: function (lat, lon) {
         fetch(
-            "https://api.openweathermap.org/data/2.5/weather?q=" 
-            + city 
+            "https://api.openweathermap.org/data/2.5/weather?lat=" 
+            + lat 
+            + "&lon=" 
+            + lon 
             + "&units=imperial&appid=" 
             + this.apiKey
         )

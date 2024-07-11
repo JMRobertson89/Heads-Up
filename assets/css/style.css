@@ -8,7 +8,6 @@
 }
 
 
-
 /* TODO style Header */
 
 header {
@@ -20,9 +19,6 @@ h1 {
 }
 
 
-
-
-
 /* TODO style api grid */
 
 .apis {
@@ -32,11 +28,8 @@ h1 {
 
 #map {
   height: 500px;
-  
-
+  width: 100%;
 }
-
-
 
 #weather {
   background: #d29f9fd0;
@@ -47,9 +40,26 @@ h1 {
 
 h2.temp {
   text-align: left;
+  margin-left: 10px;
 }
 
+.city {
+  font-size: 150%;
+  margin-left: 10px;
+}
 
+.description {
+  text-transform: capitalize;
+  margin-left: 10px;
+}
+
+.humidity {
+  margin-left: 10px;
+}
+
+.wind {
+  margin-left: 10px;
+}
 
 
 #news {
@@ -57,9 +67,8 @@ h2.temp {
 }
 
 
+
 /* TODO style About Us */
-
-
 
 
 
@@ -102,11 +111,7 @@ textarea {
     padding: 20px;
 }
 
-#map {
-  height: 500px;
-  width: 500px;
-}
-=======
+
 
 
 /* TODO style bottom grid */
