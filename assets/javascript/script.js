@@ -62,33 +62,44 @@ function fetchLocation(city, state) {
                 alert('Location not found');
             }
         })
-        .catch(error => {
-            console.error('Error fetching location:', error);
-            alert('Error fetching location');
-        });
 }
-=======
-
-
-// Map API
-
-var map = L.map('map').setView([51.505, -0.09], 13);
-
-L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    maxZoom: 19,
-    attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
-}).addTo(map);
-
-var marker = L.marker([51.5, -0.09]).addTo(map);
 
 
 
+// TODO Weather API
 
-const options = {method: 'GET', headers: {accept: 'application/json'}};
+// const options = {method: 'GET', headers: {accept: 'application/json'}};
 
-fetch('https://api.tomorrow.io/v4/weather/realtime?location=hartford&units=imperial&apikey=ns6H9BEVqWNemqAjv63ImeJ1sepRXXoE', options)
-  .then(response => response.json())
-  .then(response => console.log(response))
-  .catch(err => console.error(err));
+// fetch('https://api.tomorrow.io/v4/weather/realtime?location=hartford&units=imperial&apikey=ns6H9BEVqWNemqAjv63ImeJ1sepRXXoE', options)
+//     .then(response => response.json())
+//     .then(response => console.log(response))
+//     .catch(err => console.error(err));
 
 
+let weather = {
+    apiKey: "a62915ca2ffd9620d9f39d90f68fc54d",
+    fetchWeather: function (city) {
+        fetch(
+            "https://api.openweathermap.org/data/2.5/weather?q=" 
+            + city 
+            + "&units=imperial&appid=" 
+            + this.apiKey
+        )
+        .then((response) => response.json())
+        .then((data) => this.displayWeather(data));
+    },
+    displayWeather: function(data) {
+        const { name } = data;
+        const { icon, description} = data.weather[0];
+        const { temp, humidity } = data.main;
+        const { speed } = data.wind;
+        console.log(name,icon,description,temp,humidity,speed);
+        document.querySelector(".city").innerText = "Weather in " + name;
+        document.querySelector(".icon").src = "https://openweathermap.org/img/wn/" + icon + "@2x.png";
+        document.querySelector(".description").innerText = description
+        document.querySelector(".temp").innerText = temp + "°F";
+        document.querySelector(".humidity").innerText = "Humidity: " + humidity + "%";
+        document.querySelector(".wind").innerText = "Wind speed: " + speed + " mp/h";
+    },
+    
+};
