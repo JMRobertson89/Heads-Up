@@ -10,38 +10,6 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 // Add a marker to the map
 var marker = L.marker([0, 0]).addTo(map);
 
-// Retrieve stored address information from localStorage if available
-var storedCity = localStorage.getItem('destCity');
-var storedState = localStorage.getItem('destState');
-if (storedCity && storedState) {
-    document.getElementById('destCity').value = storedCity;
-    document.getElementById('destState').value = storedState;
-    fetchLocation(storedCity, storedState);
-}
-
-// Handle form submission and close modal
-document.querySelector('#addressModal .modal-footer .btn-primary').addEventListener('click', function() {
-    var city = document.getElementById('destCity').value;
-    var state = document.getElementById('destState').value;
-
-    // Store the address in localStorage
-    localStorage.setItem('destCity', city);
-    localStorage.setItem('destState', state);
-
-    // Fetch location information
-    fetchLocation(city, state);
-
-    // Close modal after form submission
-    var addressModal = bootstrap.Modal.getInstance(document.getElementById('addressModal'));
-    addressModal.hide();
-});
-
-// Close modal when the close button is clicked
-document.querySelector('#addressModal .modal-header .btn-close').addEventListener('click', function() {
-    var addressModal = bootstrap.Modal.getInstance(document.getElementById('addressModal'));
-    addressModal.hide();
-});
-
 function fetchLocation(city, state) {
     var address = city + ', ' + state;
 
@@ -66,6 +34,28 @@ function fetchLocation(city, state) {
             }
         })
 }
+
+// Retrieve stored address information from localStorage if available
+var storedCity = localStorage.getItem('destCity');
+var storedState = localStorage.getItem('destState');
+if (storedCity && storedState) {
+    document.getElementById('destCity').value = storedCity;
+    document.getElementById('destState').value = storedState;
+    fetchLocation(storedCity, storedState);
+}
+
+document.querySelector('#addressModal .modal-footer .btn-primary').addEventListener('click', function() {
+    var city = document.getElementById('destCity').value;
+    var state = document.getElementById('destState').value;
+
+    // Store the address in localStorage
+    localStorage.setItem('destCity', city);
+    localStorage.setItem('destState', state);
+
+    // Fetch location information
+    fetchLocation(city, state);
+
+});
 
 
 
