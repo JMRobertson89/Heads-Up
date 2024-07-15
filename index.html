@@ -17,10 +17,17 @@
     <header>
         <box-icon name='briefcase-alt' size="lg" animation="tada"></box-icon>
         <h1>Heads Up</h1>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About Us</a></li>
+            </ul>
+        </nav>
     </header>
 
 
     <main class="container">
+        <section id="home">
 
         <section id='destModal'>
             <div>
@@ -40,7 +47,7 @@
                             <input type="text" id="destState" name="destState" placeholder="State" required>
                         </div>
                         <div class="modal-footer">
-                            <button type="button" class="btn btn-primary">Submit</button>
+                            <button type="button" class="btn btn-primary" id="submitBtn" data-bs-dismiss="modal">Submit</button>
                         </div>
                     </div>
                 </div>
@@ -51,24 +58,24 @@
 
 
 
-        <section class="apis">
-
+        <section class="apis row">
+        <div class="col-md-6">
             <div id="map"></div>
-        
+        </div>
 
 
-
+        <div class="col-md-6">
             <div id="weather">
-                <div class="city">Weather in Hartford</div>
-                <h2 class="temp">51°F</h2>
+                <div class="city"></div>
+                <h2 class="temp"></h2>
                 <img src="" alt="" class="icon">
-                <div class="description">Cloudy</div>
-                <div class="humidity">Humidity: 60%</div>
-                <div class="wind">Wind Speed: 6.2 mph</div>
+                <div class="description"></div>
+                <div class="humidity"></div>
+                <div class="wind"></div>
 
                 </div>
             </div>
-
+        </div>
 
 
             <div id="news">
@@ -78,6 +85,7 @@
 
 
         </section>
+    </section>
 
 
 
@@ -87,8 +95,7 @@
 
 
 
-
-        <section>
+        <section id="about">
             <div class="container2">
                 <div>
                     <h2>About Us</h2>
