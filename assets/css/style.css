@@ -52,6 +52,13 @@ nav ul li a {
   text-decoration: underline;
 }
 
+.quote{
+  text-align: center;
+  font-style: italic;
+  font-size: 150%;
+  padding-top: 40px;
+}
+
 
 /* TODO style api grid */
 
